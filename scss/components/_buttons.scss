@@ -1,0 +1,79 @@
+/* Extend Btn css
+----------------------------------------------------------------------------------------------------*/
+%small {
+  padding: 10px;
+}
+
+%medium {
+  padding: 10px 30px;
+}
+
+%large {
+  padding: 10px 50px;
+}
+
+%classic {
+  position: relative;
+  display: inline-block;
+  border: none;
+  color: $maincolor;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  @include border-radius(0);
+  @include transition(all .2s ease-in-out);
+
+  @include hover {
+    @include transition(all .2s ease-in-out);
+  }
+}
+
+/* Btn
+----------------------------------------------------------------------------------------------------*/
+Button {
+  @extend %classic;
+}
+
+.btn {
+  color: $white;
+  @extend %classic;
+
+  /* Btn || Classic
+  ----------------------------------------------------------------------------------------------------*/
+  &-small {
+    @extend %small;
+  }
+
+  &-medium {
+    @extend %medium;
+  }
+
+  &-large {
+    @extend %large;
+  }
+
+  /* Btn || Custom
+  ----------------------------------------------------------------------------------------------------*/
+  &-main {
+    background: $maincolor;
+
+    @include hover {
+      color: $white;
+    }
+  }
+
+  &-second {
+
+  }
+
+  &-dropdown {
+    background: $maincolor;
+    cursor: pointer;
+  }
+
+  /* Btn || Outline
+  ----------------------------------------------------------------------------------------------------*/
+  &-outline {
+    color: $maincolor;
+    border: 1px solid $maincolor;
+  }
+} 

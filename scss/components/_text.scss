@@ -1,0 +1,249 @@
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $font-sansserif;
+  color: $textcolor;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+}
+
+.fonts-loaded-1 > body {
+  font-family: $googlefont-1;
+}
+
+.lte-ie8 > body {
+  font-family: $googlefont-1;
+}
+
+a {
+  color: $maincolor;
+  text-decoration: none;
+  @include transition(all .2s ease-in-out);
+
+  @include hover {
+    color: $maincolor;
+    @include transition(all .2s ease-in-out);
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Headings
+----------------------------------------------------------------------------------------------------*/
+$headings: (
+        h1: 40,
+        h2: 32,
+        h3: 28,
+        h4: 24,
+        h5: 20,
+        h6: 16
+);
+
+@each $heading-name, $heading-font-size in $headings {
+  #{$heading-name}, .#{$heading-name} {
+    font-size: $heading-font-size + px;
+    line-height: $heading-line-height;
+  }
+}
+
+/* Lists
+----------------------------------------------------------------------------------------------------*/
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+
+  ol,
+  ul {
+    padding: 0 0 0 20px;
+  }
+}
+
+li {
+  margin: 0;
+}
+
+/* Spacing
+----------------------------------------------------------------------------------------------------*/
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+  margin: 0 0 20px 0;
+}
+
+/* Wysiwyg style
+----------------------------------------------------------------------------------------------------*/
+hr {
+  clear: both;
+  border: 0;
+  background: $white;
+  @include size(auto, 1px);
+}
+
+blockquote {
+  border-left: 4px solid #eceeef;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+
+  p:last-child {
+    margin: 0;
+  }
+}
+
+cite {
+  font-style: italic;
+}
+
+small {
+  font-size: 11px;
+}
+
+table {
+  margin: 20px 0;
+  width: 100%;
+  border: $black;
+  border-collapse: collapse;
+  border-left: 0;
+  @include border-radius(3px);
+
+  th {
+    padding: 10px;
+    border-left: 1px solid $black;
+    border-top: 0;
+    vertical-align: top;
+    text-align: left;
+  }
+  td {
+    padding: 10px;
+    border-top: 1px solid $black;
+    border-left: 1px solid $black;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+abbr {
+  text-decoration: underline;
+}
+
+abbr[title], abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $black;
+}
+
+big {
+  font-size: larger;
+}
+
+s,
+strike,
+del {
+  text-decoration: line-through;
+}
+
+em,
+var {
+  font-style: italic;
+}
+
+ins {
+  background-color: $white;
+  text-decoration: none;
+}
+
+tt,
+kbd,
+samp {
+  font-family: monospace;
+}
+
+pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 20px;
+  word-break: break-all;
+  white-space: pre-wrap;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 3px;
+}
+
+q {
+  display: inline;
+  font-style: italic;
+}
+
+sub,
+sup {
+  bottom: -0.25em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Text
+----------------------------------------------------------------------------------------------------*/
+$text: (
+        left: left,
+        center: center,
+        right: right,
+        lowercase: lowercase,
+        uppercase: uppercase,
+        capitalize: capitalize,
+        justify: justify
+);
+
+.text {
+
+  /* Text || Classic
+  ----------------------------------------------------------------------------------------------------*/
+  @each $text-name, $text-style in $text {
+    &-#{$text-name} {
+      text-align: $text-style !important;
+    }
+  }
+}
+
+/* Title
+----------------------------------------------------------------------------------------------------*/
+.title {
+
+  &-main {
+
+  }
+
+  &-second {
+
+  }
+}

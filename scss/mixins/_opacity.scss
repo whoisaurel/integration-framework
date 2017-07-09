@@ -1,0 +1,15 @@
+/* Opacity
+----------------------------------------------------------------------------------------------------*/
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+/* How to use it
+
+@include opacity(0);
+@include opacity(.3);
+@include opacity(1);
+----------------------------------------------------------------------------------------------------*/

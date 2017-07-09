@@ -1,0 +1,48 @@
+### Template ###
+assets/main.*
+www/assets/css/main.*
+www/assets/js/main.*
+
+### Eclipse ###
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+### SublimeText ###
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+sftp-config-alt.json
+
+### PHPStorm ###
+*.idea
+
+### NodeJS ###
+node_modules/
+bower_components/
+
+### Temp styleguide ###
+assets/styleguide

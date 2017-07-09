@@ -1,0 +1,41 @@
+/* Global form css elements
+----------------------------------------------------------------------------------------------------*/
+input,
+textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  color: $textcolor;
+  background: darken($white, 5%);
+  @include border-radius(0);
+  @include appearance(none);
+
+  @include placeholder {
+    color: lighten($textcolor, 50%);
+  }
+}
+
+/* Label
+----------------------------------------------------------------------------------------------------*/
+label {
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* Textarea
+----------------------------------------------------------------------------------------------------*/
+textarea {
+  resize: vertical;
+}
+
+/* Form layout
+----------------------------------------------------------------------------------------------------*/
+.form__row {
+  position: relative;
+  margin: 0 0 20px;
+  @include clearfix;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

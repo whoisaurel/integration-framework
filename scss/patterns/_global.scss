@@ -1,0 +1,41 @@
+/* Background color
+----------------------------------------------------------------------------------------------------*/
+$bg-colors: (
+        bg-white: $white,
+        bg-1: $color-1
+);
+
+@each $bg-color-name, $color in $bg-colors {
+  .#{$bg-color-name} {
+    background: $color;
+  }
+}
+
+/* Text color
+----------------------------------------------------------------------------------------------------*/
+$text-colors: (
+        color-white: $white,
+        color-1: $color-1
+);
+
+@each $text-color-name, $color in $text-colors {
+  .#{$text-color-name} {
+    color: $color;
+  }
+}
+
+/* Global || Article
+----------------------------------------------------------------------------------------------------*/
+.categories {
+
+  a {
+
+  }
+}
+
+.tags {
+
+  a {
+
+  }
+}

@@ -1,0 +1,17 @@
+/* Header
+ ----------------------------------------------------------------------------------------------------*/
+.header {
+  @include clearfix;
+
+  &__logo {
+    @include clearfix;
+
+    &-link {
+      float: left;
+    }
+  }
+
+  &__img {
+    margin: 0 auto 20px;
+  }
+}

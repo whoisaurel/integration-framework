@@ -1,0 +1,22 @@
+/* Dropdown
+----------------------------------------------------------------------------------------------------*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__content {
+    display: none;
+    position: absolute;
+    background: $white;
+    min-width: 160px;
+    z-index: 1;
+    @include box-shadow(0, 5px, 15px, 0, rgba(0, 0, 0, 0.2));
+
+    li {
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+  }
+}

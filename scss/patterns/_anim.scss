@@ -1,0 +1,77 @@
+/* Fade
+----------------------------------------------------------------------------------------------------*/
+.fade {
+  @include opacity(0);
+
+  &-in {
+    @include opacity(1);
+    @include transition (all 2s cubic-bezier(.19, 1, .22, 1));
+  }
+}
+
+/* View - (col) - up
+----------------------------------------------------------------------------------------------------*/
+@include keyframes(view-up) {
+  0% {
+    @include opacity(0);
+    @include transform (translate(0, 125px));
+  }
+  100% {
+    @include opacity(1);
+    @include transform (translate(0, 0));
+  }
+}
+
+.view {
+
+  &-up {
+    @include animation(view-up 2s cubic-bezier(.19, 1, .22, 1));
+  }
+
+  &-col {
+
+    > [class^='col-'] {
+      @include opacity(0);
+      @include transform (translate(0, 125px));
+      @include transition (all 2s cubic-bezier(.19, 1, .22, 1));
+    }
+
+    &-up {
+
+      > [class^='col-'] {
+        @include opacity(1);
+        @include transform (translate(0, 0));
+        @include transition (all 2s cubic-bezier(.19, 1, .22, 1));
+
+        @for $ii from 1 through 6 {
+          &:nth-child(#{$ii}) {
+            @include transition-delay(.25s * $ii);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Page load
+----------------------------------------------------------------------------------------------------*/
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  &-inactive {
+    display: none;
+  }
+
+  .pace-progress {
+    background: $maincolor;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    @include size(100%, 2px);
+  }
+}

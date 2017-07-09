@@ -1,0 +1,54 @@
+/* Utility
+----------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  @include size(1px, 1px);
+}
+
+img,
+iframe {
+  max-width: 100%;
+  @include size(auto, auto);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- BOOTSTRAP LIKE -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+
+/* Hidden
+----------------------------------------------------------------------------------------------------*/
+.hidden {
+
+  &-xs {
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &-md {
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

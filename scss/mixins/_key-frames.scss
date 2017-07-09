@@ -1,0 +1,31 @@
+/* Key frames
+----------------------------------------------------------------------------------------------------*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/* How to use it
+
+@include keyframes(view-up) {
+  0% {
+    @include transform (translate(0, 125px));
+  }
+  100% {
+    @include transform (translate(0, 0));
+  }
+}
+----------------------------------------------------------------------------------------------------*/
