@@ -1,6 +1,9 @@
-# Fidesio Framework
+# Aurelien GUILLAUME Framework
 
 # NEEDS UPDATE !
+
+## Collaborater
+Ruslan Kassimov
 
 ## Additional Libs (TODO)
 
