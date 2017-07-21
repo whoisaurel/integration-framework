@@ -1,11 +1,11 @@
 <article class="article" itemid="<?php // URL blog ?>" itemscope itemprop="blogPost" itemtype="http://schema
 .org/BlogPosting">
     <div class="article__header">
-        <img src="<?php // Img ?>" itemprop="thumbnail" width="" height="" alt=""/>
+        <img src="assets/img/thumbnail.png" itemprop="thumbnail" width="" height="" alt=""/>
     </div>
     <div class="article__content" itemprop="text">
         <h3 class="title h3" itemprop="name">
-            <a href="<?php // URL blog ?>" title="<?php // Title blog ?>" rel="bookmark">Blog Post</a>
+            <a href="<?php // URL blog ?>" title="<?php // Title blog ?>" rel="bookmark">Article Post</a>
         </h3>
         <div class="article__meta">
             <time class="time" itemprop="datePublished" datetime="<?php // Date publication ?>">
