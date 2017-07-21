@@ -159,11 +159,6 @@
     @include box-shadow(0, 0, 100px, 0, rgba($black, 0.5));
   }
 
-  .wrapper {
-    padding: 0 15px;
-    @include clearfix;
-  }
-
   ul {
     list-style: none;
     @include clearfix;

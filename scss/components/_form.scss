@@ -30,12 +30,14 @@ textarea {
 
 /* Form layout
 ----------------------------------------------------------------------------------------------------*/
-.form__row {
-  position: relative;
-  margin: 0 0 20px;
-  @include clearfix;
+.form {
+  &__row {
+    position: relative;
+    margin: 0 0 20px;
+    @include clearfix;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

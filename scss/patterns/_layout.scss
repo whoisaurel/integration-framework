@@ -49,12 +49,15 @@
 
 /* Float
 ----------------------------------------------------------------------------------------------------*/
-.left {
-  float: left;
-}
+$direction: (
+        left: left,
+        right: right
+);
 
-.right {
-  float: right;
+@each $direction-name, $direction-name2 in $direction {
+  .#{$direction-name} {
+    float: $direction-name;
+  }
 }
 
 /* Flexbox
